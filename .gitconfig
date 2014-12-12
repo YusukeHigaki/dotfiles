@@ -1,3 +1,15 @@
 [user]
 	name = Yusuke Higaki
 	email = yusuke.higaki@dzb.jp
+[color]
+	ui = auto
+[alias]
+	co = checkout
+	st = status
+	cm = commit -m
+	di = diff
+	ds = diff -staged
+	br = branch
+	plom = pull origin master
+	psom = push -u origin master
+
