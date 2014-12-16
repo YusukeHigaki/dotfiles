@@ -1,9 +1,10 @@
 set number
 set title
 set showmatch
-set tabstop=3
+set tabstop=4
 set ignorecase
 set smartcase
 set wrapscan
 set shiftwidth=3
 set autoindent
+set paste
