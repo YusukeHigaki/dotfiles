@@ -10,11 +10,12 @@ set title "編集中のファイル名を表示する
 set ruler "ルーラーの表示する
 set wrapscan
 set tabstop=4 "タブ文字数を4にする
-set shiftwidth=3
 set syntax=htmldjango
 set hlsearch
+set backspace=indent,eol,start
 nnoremap<ESC><ESC> :nohlsearch<CR>
-
+vnoremap < <gv
+vnoremap > >gv
 
 "---------------------------
 " Start Neobundle Settings.
@@ -29,8 +30,10 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
  
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle "ctrlpvim/ctrlp.vim"
- 
+NeoBundle 'scrooloose/syntastic'
+
 call neobundle#end()
  
 " Required:
@@ -49,3 +52,13 @@ nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
 " ctrip settings.
 let g:ctrlp_regexp = 1
+
+" nerdcommenter settings.
+let g:NERDCreateDefaultMappings = 0
+let NERDSpaceDelims = 1
+nmap ,, <Plug>NERDCommenterToggle
+vmap ,, <Plug>NERDCommenterToggle
+
+" syntastic settings.
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_loc_list=2
