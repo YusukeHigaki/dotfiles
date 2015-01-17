@@ -9,6 +9,7 @@
 	cm = commit -m
 	di = diff
 	ds = diff -staged
+	ss = stash
 	br = branch
 	plom = pull origin master
 	psom = push -u origin master
